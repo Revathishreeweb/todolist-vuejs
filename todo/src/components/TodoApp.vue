@@ -30,8 +30,10 @@
             <div>
               <span class="fa fa-pen"></span>
             </div>
-            <div>
-              <span class="fa fa-delete"></span>
+          </td>
+          <td>
+             <div>
+              <span class="fa fa-trash"></span>
             </div>
           </td>
         </tr>
@@ -43,6 +45,27 @@
 <script>
 export default {
   name: "TodoApp",
-};
+  data() {
+    return {
+      task: "",
+      editedTask: null,
+      status: ["to-do", "in-progress", "finished"],
+      tasks: [
+        {
+          name: "webcode camp",
+          status: "to-do",
+        },
+        {
+          name: "Subscribe now",
+          status: "in-progress",
+        },
+        {
+          name: "Create youtube videos",
+          status: "finished",
+        },
+      ],
+    }
+  }
+}
 </script>
 
